@@ -8,8 +8,7 @@ CreateJS用のParticleEmitterクラスをTypeScriptで使用するための定�
 http://purplemonkeystudios.org/?page_id=9
 
 
-このファイル単独では動作せず、DefinitelyTypedのeaseljs.d.tsが必要です。
+このファイル単独では動作せず、DefinitelyTypedのcreatejs.d.ts, easeljs.d.ts, tweenjs.d.ts が必要です。
 
 https://github.com/borisyankov/DefinitelyTyped
 
-※現在開発中のため、正常に動作しません。
