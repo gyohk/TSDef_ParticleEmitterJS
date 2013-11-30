@@ -15,7 +15,60 @@
 /// <reference path="../easeljs/easeljs.d.ts" />
 
 declare module createjs {
+    export enum ParticleEmitterState {
+        Created  = 0,
+        Running  = 1,
+        Finished = 2
+    }
+
+    export enum ParticleEmitterType {
+        Emit,
+        OneShot
+    }
+
     export class ParticleEmitter {
+        ParticleEmitter(image?: HTMLImageElement);
+
+        // properties
+        accelerationX: number;
+        accelerationY: number;
+        angle: number;
+        angleVar: number;
+        autoRemoveOnFinished: boolean;
+        debugMode: boolean;
+        duration: number;
+        emissionRate: number;
+        emitterType: ParticleEmitterType;
+        endColor: number[];
+        endColorVar: number[];
+        endOpacity: number;
+        endSize: number;
+        endSizeVar: number;
+        endSpin: number;
+        endSpinVar: number;
+        image: HTMLImageElement;
+        life: number;
+        lifeVar: number;
+        maxParticles: number;
+        positionVarX: number;
+        positionVarY: number;
+        radialAcceleration: number;
+        radialAccelerationVar: number;
+        speed: number;
+        speedVar: number;
+        startColor: number[];
+        startColorVar: number[];
+        startOpacity: number;
+        startSize: number;
+        startSizeVar: number;
+        startSpin: number;
+        startSpinVar: number;
+        state: ParticleEmitterState;
+        tangentalAcceleration: number;
+        tangentalAccelerationVar: number;
+
+        // methods
+        reset(): void;
 
     }
 }
