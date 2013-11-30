@@ -27,7 +27,7 @@ declare module createjs {
     }
 
     export class ParticleEmitter {
-        ParticleEmitter(image?: HTMLImageElement);
+        constructor(image?: HTMLImageElement);
 
         // properties
         accelerationX: number;
