@@ -1,5 +1,6 @@
 TSDef_ParticleEmitterJS
 =======================
+[![Build Status](https://travis-ci.org/gyohk/TSDef_ParticleEmitterJS.png?branch=master)](https://travis-ci.org/gyohk/TSDef_ParticleEmitterJS)
 
 TypeScript Definition of ParticleEmitterJS for CreateJS.
 
