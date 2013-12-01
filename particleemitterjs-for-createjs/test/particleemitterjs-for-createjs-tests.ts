@@ -50,7 +50,7 @@ function addFPS() {
     stage.addChild(fpsLabel);
 }
 
-function addParticleEmitter(x, y) {
+function addParticleEmitter(x: number, y: number) {
     emitter = new createjs.ParticleEmitter(particleImage);
     emitter.emitterType = createjs.ParticleEmitterType.Emit;
     emitter.emissionRate = 30;
