@@ -12,14 +12,15 @@
 // Particle class for CreateJS.
 // Library documentation : http://purplemonkeystudios.org/?page_id=9
 
-/// <reference path="particleemitterjs-for-createjs.d.ts" />
+/// <reference path="../../lib/easeljs/easeljs.d.ts" />
+/// <reference path="../src/particleemitterjs-for-createjs.d.ts" />
 
-var canvas;         // the canvas element
-var context;        // the 2d context of the canvas
-var stage;          // the createjs stage
-var emitter;        // the emitter
-var fpsLabel;       // label to show the current frames per second
-var particleImage;  // the image to use for each particle
+var canvas:HTMLCanvasElement;                 // the canvas element
+var context: CanvasRenderingContext2D;        // the 2d context of the canvas
+var stage: createjs.Stage;                    // the createjs stage
+var emitter: createjs.ParticleEmitter;        // the emitter
+var fpsLabel: createjs.Text;                  // label to show the current frames per second
+var particleImage: HTMLImageElement;          // the image to use for each particle
 
 function test_smoke() {
     loadAssets();
@@ -51,7 +52,6 @@ function addFPS() {
 
 function addParticleEmitter(x, y) {
     emitter = new createjs.ParticleEmitter(particleImage);
-    emitter.position = new createjs.Point(x, y);
     emitter.emitterType = createjs.ParticleEmitterType.Emit;
     emitter.emissionRate = 30;
     emitter.maxParticles = 200;
@@ -59,8 +59,8 @@ function addParticleEmitter(x, y) {
     emitter.lifeVar = 1000;
     emitter.speed = 10;
     emitter.speedVar = 0;
-    emitter.positionVarX = 0;
-    emitter.positionVarY = 0;
+    emitter.positionVarX = x;
+    emitter.positionVarY = y;
     emitter.accelerationX = 0;
     emitter.accelerationY = 0;
     emitter.radialAcceleration = 0;

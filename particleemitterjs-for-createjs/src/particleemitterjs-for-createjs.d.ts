@@ -12,7 +12,7 @@
 // Particle class for CreateJS.
 // Library documentation : http://purplemonkeystudios.org/?page_id=9
 
-/// <reference path="../easeljs/easeljs.d.ts" />
+/// <reference path="../../lib/easeljs/easeljs.d.ts" />
 
 declare module createjs {
     export enum ParticleEmitterState {
@@ -26,9 +26,9 @@ declare module createjs {
         OneShot
     }
 
-    export class ParticleEmitter {
+    export class ParticleEmitter extends createjs.DisplayObject {
         constructor(image?: HTMLImageElement);
-
+        
         // properties
         accelerationX: number;
         accelerationY: number;
